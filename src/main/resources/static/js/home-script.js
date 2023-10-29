@@ -7,16 +7,16 @@ async function requestGithubUserData() {
 }
 
 
-function createHTMLOfAuthenticatedGithubUserData(githubUserData) {
+function createHTMLOfAuthenticatedGithubUserData({ avatar_url, login, name }) {
     return `
         <div class="c-profile">
-            <img src="${githubUserData.avatar_url}" 
+            <img src="${avatar_url}" 
             class="c-profile__img">
             <span class="c-profile__text">
-                Username: ${githubUserData.login}
+                Username: ${login}
             </span>
             <span class="c-profile__text">
-                Name: ${githubUserData.name}
+                Name: ${name}
             </span>
         </div>
     `;
@@ -40,19 +40,20 @@ function createLoadingHTML(loadingMessage) {
 }
 
 
-function addLoadingToPage(parent) {
+function addLoadingToPage(parent, position) {
     const loadingHTML = createLoadingHTML("Carregando dados do usuário");
-    parent.insertAdjacentHTML("beforeend", loadingHTML);
+    parent.insertAdjacentHTML(position, loadingHTML);
 }
 
 window.addEventListener("load", async () => {
     const githubSectionProfile = document.querySelector(".c-section-profile");
-    addLoadingToPage(githubSectionProfile);
+    addLoadingToPage(githubSectionProfile, "beforeend");
 
 
     try {
         const githubUserData = await requestGithubUserData();
-        const githubUserProfileHTML = createHTMLOfAuthenticatedGithubUserData(githubUserData);
+        const githubUserProfileHTML = 
+        createHTMLOfAuthenticatedGithubUserData(githubUserData);
         
         githubSectionProfile.insertAdjacentHTML("beforeend", githubUserProfileHTML);
 
