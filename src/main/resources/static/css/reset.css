@@ -6,4 +6,11 @@
 
 a {
     text-decoration: none;
+    cursor: pointer;
+}
+
+@media not (hover: hover) {
+    a {
+        cursor: default;
+    }
 }

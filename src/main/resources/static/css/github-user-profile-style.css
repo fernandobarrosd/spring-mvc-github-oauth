@@ -1,0 +1,24 @@
+.c-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    min-width: 300px;
+}
+
+.c-profile__img {
+    width: 8rem;
+    height: auto;
+    border-radius: 50%;
+    border: 0.3rem dotted #FFFFFF;
+
+}
+
+
+.c-profile__text {
+    font-size: 0.9rem;
+    background-color: #FFFFFF;
+    border-radius: 0.6rem;
+    padding: 0.6rem;
+    font-weight: bold;
+}
