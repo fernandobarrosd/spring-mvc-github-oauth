@@ -18,6 +18,10 @@ public class SpringMVCConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry corsRegistry) {
         corsRegistry.addMapping("/**")
-        .allowedOrigins("*");
+        .allowedOrigins("*")
+        .allowedMethods("*")
+        .allowedHeaders("*")
+        .allowCredentials(true)
+        .allowedOriginPatterns("*");
     }
 }
