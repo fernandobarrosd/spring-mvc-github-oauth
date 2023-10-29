@@ -1,0 +1,17 @@
+.c-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #FFFFFF;
+}
+
+.c-header__title {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+
+.c-header__link {
+    color: black;
+   
+}

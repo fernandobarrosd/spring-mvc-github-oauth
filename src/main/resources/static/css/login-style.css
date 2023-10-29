@@ -1,0 +1,36 @@
+@import "./style.css";
+@import "./header-style.css";
+
+
+.c-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 15rem;
+    gap: 2.5rem;
+
+}
+
+.c-login__title {
+    font-size: 1.7rem;
+}
+
+
+.c-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.c-link__text {
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.c-link--bgcolor-github {
+    background-color: var(--github-bgcolor);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
