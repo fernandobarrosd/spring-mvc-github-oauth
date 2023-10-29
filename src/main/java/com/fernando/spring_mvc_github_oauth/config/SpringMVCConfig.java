@@ -14,14 +14,4 @@ public class SpringMVCConfig implements WebMvcConfigurer {
         resourceHandlerRegistry.addResourceHandler("/static/**")
         .addResourceLocations("classpath:/static/");
     }
-
-    @Override
-    public void addCorsMappings(CorsRegistry corsRegistry) {
-        corsRegistry.addMapping("/**")
-        .allowedOrigins("*")
-        .allowedMethods("*")
-        .allowedHeaders("*")
-        .allowCredentials(true)
-        .allowedOriginPatterns("*");
-    }
 }
