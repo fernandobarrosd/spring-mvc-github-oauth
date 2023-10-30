@@ -31,5 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
-src/main/resources/static/node_modules
-src/main/resources/static/yarn.lock
+src/main/resources/node_modules
+src/main/resources/yarn.lock
+src/main/resources/.env
