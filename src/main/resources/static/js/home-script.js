@@ -1,5 +1,5 @@
-const { protocol, hostname } = window.location;
-const requestBaseURL = `${protocol}//${hostname}`;
+const { protocol, hostname, port } = window.location;
+const requestBaseURL = `${protocol}//${hostname}:${port}`;
 
 
 async function requestGithubUserData() {
