@@ -1,8 +1,5 @@
-import "dotenv/config";
-
-const developmentRequestBaseURL = "http://localhost:8080";
-const productionRequestBaseURL = process.env.RENDER_EXTERNAL_URL;
-const requestBaseURL = productionRequestBaseURL ?? developmentRequestBaseURL;
+const { protocol, hostname } = window.location;
+const requestBaseURL = `${protocol}//${hostname}`;
 
 
 async function requestGithubUserData() {
